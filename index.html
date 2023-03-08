@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="/favicon.ico"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16"/>
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
+    <meta name="description" content="Cross-chain DEX aggregator"/>
+    <meta name="theme-color" content="#0c0c0c"/>
+    <link rel="manifest" href="/manifest.json"/>
+    <title>OpenDEX.app - Cross-chain DEX aggregator</title>
+    <style>
+        body {
+            background: #0c0c0c;
+            padding: 0;
+            margin: 0;
+        }
+
+        .initial-bg {
+            background-image: radial-gradient(circle at 30% 51%, #f40, #0a0e1a 73%);
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            opacity: .1;
+        }
+
+        .initial-loader {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            top: 0;
+            z-index: 99999;
+            animation: bg-animation 3s linear infinite;
+        }
+
+        .initial-loader-inner {
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            width: 50%;
+            height: 50%;
+            background: url(loading-logo.svg) no-repeat center center;
+            background-size: contain;
+            -webkit-animation: sk-bounce 2s infinite ease-in-out;
+            animation: sk-bounce 2s infinite ease-in-out;
+            -webkit-animation-delay: -1s;
+            animation-delay: -1s;
+        }
+
+        @keyframes bg-animation {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            25% {
+                transform: translate(-.3%, -.3%);
+            }
+
+            50% {
+                transform: translate(-.3%, .3%);
+            }
+
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        @keyframes sk-bounce {
+            0%, 100% {
+                -webkit-transform: scale(.9);
+            }
+
+            50% {
+                -webkit-transform: scale(1);
+            }
+        }
+    </style>
+    <link href="/static/css/main.4d56bbd5.chunk.css" rel="stylesheet">
+</head>
+<body>
+<div id="root">
+    <div class="initial-bg"></div>
+    <div class="initial-loader">
+        <div class="initial-loader-inner"></div>
+    </div>
+</div>
+<script>
+    !function (e) {
+        function r(r) {
+            for (var n, p, l = r[0], a = r[1], f = r[2], c = 0, s = []; c < l.length; c++)
+                p = l[c], Object
